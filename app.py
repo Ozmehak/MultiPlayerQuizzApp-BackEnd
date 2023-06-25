@@ -11,5 +11,6 @@ if __name__ == '__main__':
     socketio.run(app)
 
 
-def test():
-    print("test")
+@app.route('/')
+def api_index():
+    return 'Welcome to the API for our Multiplayer Quizz App!'
