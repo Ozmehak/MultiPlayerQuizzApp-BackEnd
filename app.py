@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask
 from flask_socketio import SocketIO
 import os
 
@@ -9,3 +9,9 @@ socketio = SocketIO(app)
 
 if __name__ == '__main__':
     socketio.run(app)
+
+@app.route('/', methods=['GET'])
+def api_index():
+    return 'Welcome to the API for our Multiplayer Quizz App!'
+
+
